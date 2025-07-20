@@ -1,0 +1,47 @@
+.Main-nav {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    margin-top: 10px;
+}
+
+
+.group-nemu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: auto;
+    /* background-color: antiquewhite; */
+    padding: 05px 10px;
+    border-radius: 40px;
+    backdrop-filter: blur(10px);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+.Nenu-nav {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    padding: 2px 5px;
+    border-radius: 20px;
+}
+
+.Nenu-nav.active {
+    background-color: #c0c0c0;
+    filter: invert(1);
+}
+
+.Nenu-nav:hover {
+    background-color: #c0c0c0;
+    filter: invert(1);
+}
+
+@media screen and (max-width: 500px) {
+    .Main-nav {
+        position: fixed;
+        display: flex;
+        bottom: 10px;
+    }
+}
