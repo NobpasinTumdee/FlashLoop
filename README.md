@@ -1,1 +1,4 @@
 # FlashLoop
+```
+npm install idb
+```
