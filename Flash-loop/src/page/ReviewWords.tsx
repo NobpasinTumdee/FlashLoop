@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'react';
 import type { Word } from '../types';
 import { getAllWordsFromDB, incrementReviewCount } from '../db';
+import './page.css'
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+
 
 export default function ReviewWords() {
   const [words, setWords] = useState<Word[]>([]);
@@ -8,6 +12,10 @@ export default function ReviewWords() {
 
   useEffect(() => {
     getAllWordsFromDB().then(setWords);
+    Aos.init({
+      duration: 500,
+      once: true,
+    });
   }, []);
 
   const handleNext = async () => {
@@ -26,13 +34,28 @@ export default function ReviewWords() {
   const word = words[index];
 
   return (
-    <div>
-      <h2>ทบทวนคำศัพท์</h2>
-      <p>อังกฤษ: <strong>{word.english}</strong></p>
-      <p>แปล: {word.thai}</p>
-      <p>ประเภท: {word.type}</p>
-      <p>ทบทวนแล้ว: {word.reviewCount} ครั้ง</p>
-      <button onClick={handleNext}>คำต่อไป</button>
-    </div>
+    <>
+      <div className='group-Review'>
+        <h2 data-aos="fade-down">Review vocabulary</h2>
+        <div style={{ display: 'flex', justifyContent: 'center' }} data-aos="flip-up">
+          <div className="card">
+            <div className="card-inner">
+              <div className="card-front">
+                <p>{word.english}</p>
+                <p>{word.type}</p>
+              </div>
+              <div className="card-back">
+                <p>{word.thai}</p>
+                <p>{word.type}</p>
+                <p>{word.reviewCount}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{ marginTop: '20px' }} data-aos="fade-up">
+          <button className='btn' onClick={handleNext}>Next</button>
+        </div>
+      </div>
+    </>
   );
 }

@@ -6,6 +6,10 @@
     margin-top: 10px;
 }
 
+.overflow-nav-windows {
+    height: 60px;
+}
+
 
 .group-nemu {
     display: flex;
@@ -43,5 +47,9 @@
         position: fixed;
         display: flex;
         bottom: 10px;
+    }
+
+    .overflow-nav-windows {
+        display: none;
     }
 }

@@ -5,7 +5,7 @@ const Layout = () => {
     return (
         <>
             <Navbar />
-            <div style={{height: '60px'}}></div>
+            <div className="overflow-nav-windows"></div>
             <Outlet />
         </>
     )
