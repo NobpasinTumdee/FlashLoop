@@ -4,19 +4,27 @@ import { addWordToDB } from '../db';
 import './page.css'
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import { message } from 'antd';
 
 
 export default function AddWord() {
   const [english, setEnglish] = useState('');
   const [thai, setThai] = useState('');
   const [type, setType] = useState<WordType>('noun');
+  const [messageApi, contextHolder] = message.useMessage();
+  const success = () => {
+    messageApi.open({
+      type: 'success',
+      content: 'Yay! Very good!',
+    });
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     await addWordToDB({ english, thai, type, reviewCount: 0 });
     setEnglish('');
     setThai('');
-    alert('เพิ่มคำศัพท์แล้ว');
+    await success();
   };
 
   useEffect(() => {
@@ -28,6 +36,7 @@ export default function AddWord() {
 
   return (
     <>
+      {contextHolder}
       <div className='main-form'>
         <form onSubmit={handleSubmit} className='Add-form'>
           <h2>Add Vocabulary</h2>

@@ -212,3 +212,21 @@
   opacity: 0;
 }
 
+/* HOME */
+.layout-all-word {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* responsive */
+  gap: 12px;
+  justify-content: center; /* center item ทั้ง grid */
+
+  padding: 16px;
+
+}
+
+
+.card-word {
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  border-radius: 10px;
+}

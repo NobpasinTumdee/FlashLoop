@@ -34,3 +34,8 @@ export async function incrementReviewCount(id: number) {
     await db.put(STORE_NAME, word);
   }
 }
+
+export async function deleteWord(id: number) {
+  const db = await dbPromise;
+  await db.delete(STORE_NAME, id);
+}
