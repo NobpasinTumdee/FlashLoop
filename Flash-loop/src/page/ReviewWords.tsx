@@ -5,6 +5,7 @@ import './page.css'
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { message } from 'antd';
+import { Link } from 'react-router-dom';
 
 
 export default function ReviewWords() {
@@ -52,6 +53,9 @@ export default function ReviewWords() {
           <h2>There are no words yet. Please add them first.</h2>
           <img width={200} src="https://media.tenor.com/Rp0U7bdOhSUAAAAi/anime.gif" alt="Anime" />
         </div>
+        <div style={{width:'100%',textAlign:'center'}}>
+          <Link to={"/add"} style={{textDecoration:'none',color:'black'}}>GO GO GO!</Link>
+        </div>
       </>
     );
   }
@@ -67,7 +71,7 @@ export default function ReviewWords() {
           <div className="card">
             <div className="card-inner">
               <div className="card-front">
-                <p>{word.english}</p>
+                <h1>{word.english}</h1>
                 <p>{word.type}</p>
               </div>
               <div className="card-back">
