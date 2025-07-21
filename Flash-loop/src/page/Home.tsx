@@ -27,7 +27,7 @@ const Home = () => {
         {donate &&
           <>
             <Image className='QR' width={200} src={QR} alt="QR" />
-            <p data-aos="fade-up" style={{ textAlign: 'center', margin: '0 20%' }}>
+            <p data-aos="fade-up" style={{ textAlign: 'center', margin: '0 20%',color:'var(--text-header)'}}>
               We're no strangers to love You know the rules and so do I (Do I) A full commitment's what I'm thinking of You wouldn't get this from any other guy
               I just wanna tell you how I'm feeling Gotta make you understand<br />
               Never gonna give you up<br />

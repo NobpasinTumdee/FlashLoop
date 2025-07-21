@@ -31,6 +31,7 @@
   padding: 15px 5px 10px 20px;
   box-shadow: inset 4px 4px 4px rgba(15, 15, 15, 0.315), 4px 4px 4px rgba(28, 28, 28, 0.13);
   border-radius: 25px;
+  border: 2px solid var(--border);
   background-clip: padding-box;
 }
 
@@ -39,7 +40,7 @@
 }
 
 .inputADD::placeholder {
-  color: #535353;
+  color: var(--text-header);
   text-transform: uppercase;
   transition: all 0.3s ease;
   font-size: 19px;
@@ -48,7 +49,7 @@
 }
 
 .inputADD:focus::placeholder {
-  color: #999;
+  color: var(--border);
 }
 
 .select-ADD {
@@ -56,11 +57,11 @@
   text-align: center;
   width: 50%;
   height: 30px;
-  border: none;
+  border: 2px solid var(--border);
   outline: none;
   background: none;
   font-size: 18px;
-  color: #4d4d4d;
+  color: var(--text-header);
   box-shadow: inset 4px 4px 4px rgba(15, 15, 15, 0.315), 4px 4px 4px rgba(28, 28, 28, 0.13);
   border-radius: 20px;
   font-family: "Nunito", sans-serif;
@@ -68,22 +69,21 @@
 
 .button-from {
   margin-top: 20px;
-  color: #090909;
+  color: var(--border);
   padding: 0.7em 1.7em;
   font-size: 18px;
   font-weight: 800;
   border-radius: 0.5em;
   background: none;
   cursor: pointer;
-  border: 1px solid #e8e8e8;
+  border: 2px solid var(--border);
   transition: all 0.3s;
-  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
   font-family: "Nunito", sans-serif;
 }
 
 .button-from:active {
   color: #666;
-  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+  box-shadow: inset 4px 4px 12px var(--border-background), inset -4px -4px 12px var(--border-background);
 }
 
 
@@ -137,8 +137,8 @@
 }
 
 .card-front {
-  background-color: #ffffff;
-  color: #303030;
+  background-color: var(--text-header);
+  color: var(--background);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -150,8 +150,8 @@
 }
 
 .card-back {
-  background-color: #303030;
-  color: #fff;
+  background-color: var(--border);
+  color: var(--text-header);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -173,11 +173,12 @@
   cursor: pointer;
   border-radius: 6em;
   transition: all 0.2s;
-  border: none;
+  border: 2px solid var(--border);
   font-family: "Nunito", sans-serif;
   font-weight: 800;
-  color: black;
-  background-color: white;
+  color: var(--border);
+  background-color: var(--background);
+  margin: 0 5px;
 }
 
 .btn:hover {
@@ -215,7 +216,7 @@
 /* HOME */
 .layout-all-word {
   width: 80%;
-  margin: 0 10%;
+  margin: 0 10% 20%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   /* responsive */
@@ -223,12 +224,11 @@
   justify-content: center;
   /* center item ทั้ง grid */
   text-align: center;
-
 }
 
 
 .card-word {
-  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  border: 2px solid var(--border);
   border-radius: 10px;
 }
 

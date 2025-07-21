@@ -34,12 +34,16 @@
 }
 
 .Nenu-nav.active {
-    background-color: #c0c0c0;
+    background-color: var(--border);
+}
+.Nenu-nav.active img{
     filter: invert(1);
 }
 
 .Nenu-nav:hover {
-    background-color: #c0c0c0;
+    background-color: var(--border);
+}
+.Nenu-nav:hover img{
     filter: invert(1);
 }
 

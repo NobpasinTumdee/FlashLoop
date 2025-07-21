@@ -1,11 +1,13 @@
 body { 
     margin: 0;
     font-family: "Nunito", sans-serif;
+    background-color: var(--background);
+    color: var(--border);
 }
 
 *::selection {
-    background-color: #424242;
-    color: #fff;
+    background-color: var(--border-background);
+    color: var(--border);
 }
 
 *::-webkit-scrollbar {
@@ -15,7 +17,7 @@ body {
 
 :root {
     --text: #444444;
-    --text-header: #FFFBFE;
+    --text-header: #6e6e6e;
     --text-hover: #FFFBFE;
     --border: #444444;
     --border-background: #948676;
@@ -49,7 +51,7 @@ body {
     --text: #FFFFFF;
     --text-header: #A30000;
     --text-hover: #FEC8CD;
-    --border: #FFFFFF;
+    --border: #f9ecec;
     --border-background: #513A2A;
     --background: #FEC8CD;
 }
