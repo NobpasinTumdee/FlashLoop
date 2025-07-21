@@ -67,7 +67,7 @@ export default function ReviewWords() {
       {contextHolder}
       <div className='group-Review'>
         <h2 data-aos="fade-down">Review vocabulary</h2>
-        <div style={{ display: 'flex', justifyContent: 'center' }} data-aos="flip-up">
+        <div style={{ display: 'flex', justifyContent: 'center' }} data-aos="flip-left">
           <div className="card">
             <div className="card-inner">
               <div className="card-front">
