@@ -7,3 +7,49 @@ body {
     background-color: #424242;
     color: #fff;
 }
+
+*::-webkit-scrollbar {
+    display: none;
+    /* For Chrome, Safari, and Opera */
+}
+
+:root {
+    --text: #444444;
+    --text-header: #FFFBFE;
+    --text-hover: #FFFBFE;
+    --border: #444444;
+    --border-background: #948676;
+    --background: #FFFBFE;
+}
+[data-theme="hanok"] {
+    --text: #393B3B;
+    --text-header: #8B6F5C;
+    --text-hover: #D8D2C3;
+    --border: #513A2A;
+    --border-background: #CDC0AF;
+    --background: #D8D2C3;
+}
+[data-theme="olivia"] {
+    --text: #F2EFED;
+    --text-header: #4E3E3E;
+    --text-hover: #1C1B1D;
+    --border: #DEAF9D;
+    --border-background: #4E3E3E;
+    --background: #1C1B1D;
+}
+[data-theme="alduin"] {
+    --text: #D8D2C3;
+    --text-header: #FFF9F2;
+    --text-hover: #1C1C1C;
+    --border: #DFD7AF;
+    --border-background: #FFF9F2;
+    --background: #1C1C1C;
+}
+[data-theme="darling"] {
+    --text: #FFFFFF;
+    --text-header: #A30000;
+    --text-hover: #FEC8CD;
+    --border: #FFFFFF;
+    --border-background: #513A2A;
+    --background: #FEC8CD;
+}

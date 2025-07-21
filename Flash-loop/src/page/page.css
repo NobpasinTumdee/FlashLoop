@@ -237,3 +237,41 @@
   border-radius: 10px;
 
 }
+
+
+
+
+
+
+/* Theme */
+.theme-contaner {
+  width: 80%;
+  margin: 0 10%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 130px));
+  gap: 12px;
+  justify-content: center;
+  text-align: center;
+}
+
+.theme-sub-select {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  text-align: center;
+  font-weight: 700;
+  padding: 0 10px;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.theme-sub-select:hover {
+  scale: 1.2;
+}
+
+.dot-span {
+  width: 14px;
+  height: 15px;
+  border-radius: 20px;
+}

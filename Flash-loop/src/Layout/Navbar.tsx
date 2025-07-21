@@ -17,6 +17,9 @@ const Navbar = () => {
                     <Link to="/review" className={`Nenu-nav ${isActive('/review') ? 'active' : ''}`}>
                         <img height={30} width={30} src="https://th.bing.com/th/id/R.892c6094d01d82aa1a83000715a97b20?rik=FyaZIUwCxAvDxw&pid=ImgRaw&r=0" alt="flash" />
                     </Link>
+                    <Link to="/theme" className={`Nenu-nav ${isActive('/theme') ? 'active' : ''}`}>
+                        <img height={30} width={30} src="https://cdn-icons-png.flaticon.com/512/749/749034.png" alt="theme" />
+                    </Link>
                 </div>
             </nav>
         </>

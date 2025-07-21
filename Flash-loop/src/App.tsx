@@ -5,6 +5,7 @@ import ReviewWords from './page/ReviewWords';
 import Layout from './Layout/Layout';
 import './App.css'
 import Home from './page/Home';
+import Theme from './page/Theme';
 
 const router = createHashRouter([
   {
@@ -16,6 +17,7 @@ const router = createHashRouter([
       { path: "/Home", element: <Home /> },
       { path: "/add", element: <AddWord /> },
       { path: "/review", element: <ReviewWords /> },
+      { path: "/theme", element: <Theme /> },
     ]
   }
 ]);
