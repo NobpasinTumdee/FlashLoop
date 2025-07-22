@@ -23,11 +23,11 @@ const Home = () => {
     <>
       <h1 data-aos="fade-down" style={{ textAlign: 'center' }}>Welcome to Flash Loop!</h1>
       <div style={{ textAlign: 'center', margin: '0 20%' }}>
-        <h1 onClick={() => setdonte(!donate)} style={{ cursor: 'pointer' }}>🍵Donate Me☕</h1>
+        <h3 onClick={() => setdonte(!donate)} style={{ cursor: 'pointer' }}>🍵Donate Me☕</h3>
         {donate &&
           <>
             <Image className='QR' width={200} src={QR} alt="QR" />
-            <p data-aos="fade-up" style={{ textAlign: 'center', margin: '0 20%',color:'var(--text-header)'}}>
+            <p data-aos="fade-up" style={{ textAlign: 'center', margin: '0 20%', color: 'var(--text-header)' }}>
               We're no strangers to love You know the rules and so do I (Do I) A full commitment's what I'm thinking of You wouldn't get this from any other guy
               I just wanna tell you how I'm feeling Gotta make you understand<br />
               Never gonna give you up<br />
@@ -41,23 +41,21 @@ const Home = () => {
           </>
         }
       </div>
-        <div className='layout-all-word'>
-          {words.length > 0 ? (
-            words.map((word, index) => (
-              <>
-                <div key={word.id} className='card-word' data-aos="fade-down">
-                  <p>#{index + 1}</p>
-                  <h1 style={{margin:'0'}}>{word.english}</h1>
-                  <p>TH : {word.thai}</p>
-                  <p>TYPE : {word.type}</p>
-                  <p>Count : {word.reviewCount}</p>
-                </div>
-              </>
-            ))
-          ) : (
-            <p>There are no words to memorize yet.</p>
-          )}
-        </div>
+      <div className='layout-all-word'>
+        {words.length > 0 ? (
+          words.map((word, index) => (
+            <div key={word.id} className='card-word' data-aos="fade-down">
+              <p>#{index + 1}</p>
+              <h1 style={{ margin: '0' }}>{word.english}</h1>
+              <p>TH : {word.thai}</p>
+              <p>TYPE : {word.type}</p>
+              <p>Count : {word.reviewCount}</p>
+            </div>
+          ))
+        ) : (
+          <p>There are no words to memorize yet.</p>
+        )}
+      </div>
 
     </>
   )

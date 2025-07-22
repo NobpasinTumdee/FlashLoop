@@ -11,6 +11,34 @@
     height: 60px;
 }
 
+.streak {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    font-family: "Nunito", sans-serif;
+    font-weight: 900;
+    color: #FF9908;
+    background-color: transparent;
+    z-index: 100;
+    border-radius: 20px;
+    backdrop-filter: blur(3px);
+}
+
+.streak img{
+    animation: flame 1.5s ease-in-out  2s;
+}
+
+@keyframes flame {
+    0%{rotate: 0deg;opacity: 0.5;}
+    25%{rotate: 20deg; scale: 1.4;}
+    50%{rotate: -20deg;opacity: 1;}
+}
+
+.streak p{
+    margin: 0;
+    text-align: center;
+    transform: translateY(-10px);
+}
 
 .group-nemu {
     display: flex;
@@ -57,5 +85,12 @@
 
     .overflow-nav-windows {
         display: none;
+    }
+
+    .streak {
+        bottom: 10px;
+        right: 10px;
+        left: auto;
+        top: auto;
     }
 }

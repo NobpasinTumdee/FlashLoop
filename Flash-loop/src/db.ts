@@ -4,7 +4,7 @@ import type { Word } from './types';
 const DB_NAME = 'vocab-db';
 const STORE_NAME = 'words';
 
-export const dbPromise = openDB(DB_NAME, 1, {
+export const dbPromise = openDB(DB_NAME, 2, {
   upgrade(db) {
     if (!db.objectStoreNames.contains(STORE_NAME)) {
       const store = db.createObjectStore(STORE_NAME, {
@@ -12,6 +12,9 @@ export const dbPromise = openDB(DB_NAME, 1, {
         autoIncrement: true,
       });
       store.createIndex('english', 'english');
+    }
+    if (!db.objectStoreNames.contains('usage')) {
+      db.createObjectStore('usage', { keyPath: 'key' }); // สำหรับเก็บ streak/lastVisit
     }
   },
 });
