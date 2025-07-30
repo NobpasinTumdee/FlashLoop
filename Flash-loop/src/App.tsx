@@ -6,6 +6,7 @@ import Layout from './Layout/Layout';
 import './App.css'
 import Home from './page/Home';
 import Theme from './page/Theme';
+import Achievement from './page/Achievement';
 
 const router = createHashRouter([
   {
@@ -18,6 +19,7 @@ const router = createHashRouter([
       { path: "/add", element: <AddWord /> },
       { path: "/review", element: <ReviewWords /> },
       { path: "/theme", element: <Theme /> },
+      { path: "/achievement", element: <Achievement /> },
     ]
   }
 ]);

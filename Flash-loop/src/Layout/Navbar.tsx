@@ -20,6 +20,9 @@ const Navbar = () => {
                     <Link to="/theme" className={`Nenu-nav ${isActive('/theme') ? 'active' : ''}`}>
                         <img height={30} width={30} src="https://cdn-icons-png.flaticon.com/512/749/749034.png" alt="theme" />
                     </Link>
+                    <Link to="/achievement" className={`Nenu-nav ${isActive('/achievement') ? 'active' : ''}`}>
+                        <img height={30} width={30} src="https://static.thenounproject.com/png/195251-200.png" alt="theme" />
+                    </Link>
                 </div>
             </nav>
         </>

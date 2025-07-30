@@ -275,3 +275,31 @@
   height: 15px;
   border-radius: 20px;
 }
+
+
+
+
+
+/* achievement */
+.achievement-container {
+  width: 90%;
+  margin: 20px 5%;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+
+.achievement-title {
+  /* background: var(--border); */
+  text-align: center;
+  /* border: 2px solid var(--border); */
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 20px;
+}
+
+.achievement-title img {
+  width: 50%;
+}
