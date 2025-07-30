@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import type { WordType } from '../types';
+import { WordTypearray } from '../types';
 import { addWordToDB } from '../db';
 import './page.css'
 import Aos from 'aos';
@@ -61,10 +62,9 @@ export default function AddWord() {
             />
           </div>
           <select value={type} onChange={e => setType(e.target.value as WordType)} className='select-ADD' data-aos="fade-up" data-aos-duration="2500">
-            <option value="noun">Noun</option>
-            <option value="verb">Verb</option>
-            <option value="adjective">Adjective</option>
-            <option value="adverb">Adverb</option>
+            {WordTypearray.map((wordType , index) => (
+              <option key={index} value={wordType.EN}>{wordType.EN} - {wordType.TH}</option>
+            ))}
           </select>
           <button type="submit" className='button-from' data-aos="zoom-in" data-aos-duration="2500">Add Vocabulary</button>
         </form>

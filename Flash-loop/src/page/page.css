@@ -54,7 +54,7 @@
 
 .select-ADD {
   margin: 0 20px;
-  text-align: center;
+  text-align: left;
   width: 50%;
   height: 30px;
   border: 2px solid var(--border);
