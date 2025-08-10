@@ -3,8 +3,10 @@ import 'aos/dist/aos.css';
 import { useEffect, useState } from 'react';
 import QR from '../assets/Click_it.jpg';
 import type { Word } from '../types';
-import { getAllWordsFromDB } from '../db';
+import { getAllWordsFromDB, setupAchievements } from '../db';
 import { Image } from 'antd';
+
+setupAchievements();
 
 const Home = () => {
   const [words, setWords] = useState<Word[]>([]);
