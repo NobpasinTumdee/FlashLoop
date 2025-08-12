@@ -64,23 +64,25 @@ const Achievement = () => {
         {achievements.map((achievement, index) => (
           <div className={`achievement-title ${achievement.isUnlocked ? 'unlocked' : ''}`} key={index} >
             <img src={index === 0 ? levelI : index === 1 ? levelII : index === 2 ? levelIII : index === 3 ? levelIV : index === 4 ? levelV : levelVI} alt={`level${index + 1}`} />
-            <p>
-              <b>{achievement.name}</b><br />
-              {achievement.description}<br />
-            </p>
-            {achievement.isUnlocked ? (
-              <p style={{ color: 'green', margin:'0'}}>Unlocked</p>
-            ) : (
-              <>
-                <div style={{ width: '100%', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <div className='progress-bar'>
-                    <div className='progress-bar-inner' style={{ width: `${progressbar(achievement.progress)}%`, }} />
+            <div style={{width:'100%'}}>
+              <p>
+                <b>{achievement.name}</b><br />
+                {achievement.description}<br />
+              </p>
+              {achievement.isUnlocked ? (
+                <p style={{ color: 'green', margin: '0' }}>Unlocked</p>
+              ) : (
+                <>
+                  <div style={{ width: '100%', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <div className='progress-bar'>
+                      <div className='progress-bar-inner' style={{ width: `${progressbar(achievement.progress)}%`, }} />
+                    </div>
+                    <p className='progress-bar-text'>{progressbar(achievement.progress)}%</p>
                   </div>
-                  <p className='progress-bar-text'>{progressbar(achievement.progress)}%</p>
-                </div>
-                {/* <p style={{ color: 'red', margin:'0' }}>Locked</p> */}
-              </>
-            )}
+                  {/* <p style={{ color: 'red', margin:'0' }}>Locked</p> */}
+                </>
+              )}
+            </div>
 
 
             {/* <div>
